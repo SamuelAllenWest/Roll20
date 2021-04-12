@@ -1,0 +1,484 @@
+
+<!--Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+
+<div>
+    <button type="action" name="act_character">Character</button>
+    <button type="action" name="act_journal" >Equipment/Abilities</button>
+</div>
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab' value = 'character'/>
+
+
+<div class= 'sheet-character'>
+    <!--Character Stats and Abilities  -->
+    <h2>Character Stats</h2>
+    <div class = 'container'>
+
+      <div class = 'column_one'>  
+    
+        <div class = 'column_element'>
+          <table class = 'player_table'>  
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/NOagY75.png" alt= "Icon"></td>
+              <td>Name</td>
+              <td> <input type="text" class="form-control" placeholder='' name = 'attr_name' </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/6AyrilY.png" alt= "Icon"></td>
+              <td>Level</td>
+              <td><input type = 'number' name = 'attr_level' placeholder = '0'></td>
+            </tr>
+          </table>
+          <table class='health_stam_table'>
+            <h3>Stamina and Health</h3>
+            <tr>
+                <th class= 'img_row'></th>
+                <th>Name</th>
+                <th>Current</th>
+                <th>Max</th>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/VFMWEmW.png" alt="Icon"></td>
+              <td>Stamina</td>
+              <td><input type = 'number' name= 'attr_stam_current' placeholder = '0'></td>
+              <td><input type = 'number' name= 'attr_stam_max' placeholder = '0'></td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/OiqrO7I.png" alt="Icon"></td>
+              <td>Health</td>
+              <td><input type = 'number' name = 'attr_health_current' placeholder = '0'></td>
+              <td><input type = 'number' name = 'attr_health_max' placeholder = '0'></td>
+            </tr>
+    
+              
+          </table>
+          <table class ='speed_question'>
+            <h3>Speed</h3>
+            <tr>
+              <th class = 'img_row'></td>
+              <th>Speed</td>
+              <th>Dex</td>
+              <th>Str</td>
+              <th class = 'variant'>Misc Bonus</td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/8z5iQSY.png" alt="Icon"></td>
+              <td><input type = 'number' name= 'attr_def' value="(@{def_choice}+8+@{def_misc})" disabled="true"></td>
+              <td><input type="radio" name="attr_def_choice" value="@{dex}"></td>
+              <td> <input type="radio" name="attr_def_choice" value="@{con}"></td>
+              <td><input type = 'number' name= 'attr_def_misc' value='0'></td>
+            </tr>
+          </table>
+        </div>
+        <div class = 'column_element'>
+            <table class = 'death'> 
+            <h3>Dying Conditions</h3>
+            <tr>
+                <th class = 'img_row'><img src='https://i.imgur.com/SkC054c.png' alt"Icon"></th>
+                <th>Not Dying</th>
+                <th>Dying</th>
+                <th>Critical</th>
+            </tr> 
+            <tr>
+                <td class = 'img_row'></td>
+                <td><input type="radio" name="attr_dying_status" value="fine"></td>
+                <td><input type="radio" name="attr_dying_status" value="dying"></td>
+                <td><input type="radio" name="attr_dying_status" value='critical'></td>
+            </tr>
+          </table>
+          <h2>Ability Modifier </h2>    
+          <table class = 'ability_table'>  
+            <tr>
+              <th class = "img_row"> </th>
+              <th> Ability</th>
+              <th> Modifier</th>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/RXl3ZMI.png" alt="Icon"></td>
+              <td> Strength</td>
+              <td><input type = 'number' name = 'attr_str'placeholder = '0' ></td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/W9waaGT.png" alt="Icon"></td>
+              <td> Dexterity</td>
+              <td><input type = 'number' name = 'attr_dex' placeholder = '0'></td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/52f7tQX.png" alt="Icon"></td>
+              <td> Constitution</td>
+              <td><input type = 'number' name = 'attr_con' placeholder = '0' ></td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/zJrYcSP.png" alt="Icon"></td>
+              <td>Wisdom </td>
+              <td><input type = 'number'  name = 'attr_wis' placeholder = '0' ></td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/IfxJIJx.png" alt="Icon"></td>
+              <td> Intelligence</td>
+              <td><input type = 'number'  name = 'attr_int' placeholder = '0' ></td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/btPsrAV.png" alt="Icon"></td>
+              <td> Charisma</td>
+              <td><input type = 'number' name = 'attr_cha' placeholder = '0' ></td>
+            </tr>
+          </table>
+        </div>
+      </div>  
+      <div class = 'column_two'>
+        <div class = 'column_element'>
+            <h2>Dice Rolling</h2>
+            <table> 
+                <tr>
+                    <th>Skill</th>
+                    <th>Ability</th>
+                    <th>Specilization?</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        <select class='skill_dropdown' name= 'attr_roll_skill'>
+                            <option value="@{aim}">Aim</option>
+                            <option value="@{ath}">Athletics</option>
+                            <option value="@{cov}">Converse</option>
+                            <option value="@{cra}">Craft</option>
+                            <option value="@{for}">Fortitude</option>
+                            <option value="@{ins}">Insight</option>
+                            <option value="@{kno}">Knowledge</option>
+                            <option value="@{per}">Perception</option>
+                            <option value="@{pef}">Performance</option>
+                            <option value="@{ref}">Reflex</option>
+                            <option value="@{sti}">Strike</option>
+                            <option value="@{sub}">Subtlety</option>
+                            <option value="@{wil}">Will</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class='ability_dropdown' name="attr_roll_as">
+                            <option value="@{str}">Strength</option>
+                            <option value="@{dex}">Dexterity</option>
+                            <option value="@{con}">Constitution</option>
+                            <option value="@{wis}">Wisdom</option>
+                            <option value="@{int}">Intelligence</option>
+                            <option value="@{cha}">Charisma</option>
+                        </select>
+                    </td>
+                    <td><input type= "checkbox" name= "attr_roll_spec" value='2'></input></td>
+                    <td><button type="roll" name="roll_button" value="@{roll_skill}+@{roll_spec}+@{roll_as}">Roll</button></td>
+                    
+                </tr>
+            </table>
+            <button type="roll" name="boon_bane" value="/roll 1d6">Bane/Boon</button>
+    
+        </div>
+        <div class = 'column_element'>
+          <h2> Skills </h2>    
+          <table class = 'skills_table'>  
+            <tr>
+              <th class = 'img_row'> </th>
+              <th>Skill</th>
+              <th>Ability </th>
+              <th>Training</th>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/k2ThdYn.png" alt="Icon"></td>
+              <td>Aim</td>
+              <td> Dex</td>
+              <td>
+                <select class='skill_dropdown' name="attr_aim">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/8iMaw4p.png" alt="Icon"></td>
+              <td>Athletics</td>
+              <td>Str</td>
+              <td>
+                <select class='skill_dropdown' name="attr_ath">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/2MvunU1.png" alt="Icon"></td>
+              <td>Converse</td>
+              <td>Cha</td>
+              <td>
+                <select class='skill_dropdown' name="attr_cov">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+             <tr>          
+              <td class = 'img_row'><img src="https://i.imgur.com/kS0ghqN.png" alt="Icon"></td>
+              <td>Craft</td>
+              <td>Int</td>
+              <td>
+                <select class='skill_dropdown' name="attr_cra">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/w3pwdpR.png" alt="Icon"></td>
+              <td>Fortitude</td>
+              <td>Con</td>
+              <td>
+                <select class='skill_dropdown' name="attr_for">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/lsChbB1.png" alt="Icon"></td>
+              <td>Insight</td>
+              <td>Wis</td>
+              <td>
+                <select class='skill_dropdown' name="attr_ins">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/96UxSPR.png" alt="Icon"></td>
+              <td>Knowledge</td>
+              <td>Int</td>
+              <td>
+                <select class='skill_dropdown' name="attr_kno">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/5pwVA2E.png" alt="Icon"></td>
+              <td>Perception</td>
+              <td>Wis </td>
+              <td>
+                <select class='skill_dropdown' name="attr_per">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/HIcLsco.png" alt="Icon"></td>
+              <td>Performance</td>
+              <td>Cha</td>
+              <td>
+                <select class='skill_dropdown' name="attr_pef">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/8jI4Ufb.png" alt="Icon"></td>
+              <td>Reflexes</td>
+              <td>Dex</td>
+              <td>
+                <select class='skill_dropdown' name="attr_ref">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>       
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/4LNKbBZ.png" alt="Icon"></td>
+              <td>Subtlety</td>
+              <td>Dex</td>
+              <td>
+                <select class='skill_dropdown' name="attr_sub">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>  
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/54l7kir.png" alt="Icon"></td>
+              <td>Strike</td>
+              <td>Str</td>
+              <td>
+                <select class='skill_dropdown' name="attr_sti">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>  
+            <tr>
+              <td class = 'img_row'><img src="https://i.imgur.com/KuxiNlf.png" alt="Icon"></td>
+              <td>Will</td>
+              <td>Wis</td>
+              <td>
+                <select class='skill_dropdown' name="attr_wil">
+                    <option value="/roll 3d6">Untrained</option>
+                    <option value="/roll 2d6+1d8">Practiced</option>
+                    <option value="/roll 1d6+2d8">Trained</option>
+                    <option value="/roll 3d4">Flawed</option>
+                </select>
+              </td>
+            </tr>  
+          </table>
+        </div>
+      <div class = 'column_element'>
+          <h2> Specializations</h2>
+          <table class = 'specialization_table'> 
+            <tr>
+              <th>Specilization</th>
+              <th> Specialized (+2)</th>
+            </tr>
+            <tr>
+              <td><input type="text" class="form-control" name = 'attr_spec1' placeholder="Ex: Warhammers"> </td>
+              <td><input class="form-check-input" type="checkbox" name = 'attr_spec1s' value="specialized"></td>
+            </tr>
+            <tr>
+              <td> <input type="text" class="form-control" name = 'attr_spec2' placeholder=""> </td>
+              <td><input class="form-check-input" type="checkbox" name = 'attr_spec2s' value="specialized"></td>
+            </tr>
+            <tr>
+              <td> <input type="text" class="form-control" name = 'attr_spec3' placeholder=""> </td>
+              <td><input class="form-check-input" type="checkbox" name = 'attr_spec3s' value="specialized"></td>
+            </tr>
+            <tr>
+              <td> <input type="text" class="form-control" name = 'attr_spec4' placeholder=""> </td>
+              <td><input class="form-check-input" type="checkbox" name = 'attr_spec4s' value="specialized"></td>
+            </tr>
+        </table>
+      </div>
+    
+        </div>
+    </div>
+</div>
+
+<div class= 'sheet-journal'>
+    <div class='column_1'>
+        <div class='equipment'>
+            <h2>Equipment</h2>
+               <table class = 'equipment_table'> 
+                <tr>
+                  <th>Equipment</th>
+                  <th>Notes</th>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip1' placeholder="Ex: Crowbar"> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes1' placeholder="Notes"> ></td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip2'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes2'> </td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip3'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes3'> </td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip4'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes4'> </td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip5'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes5'> </td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip6'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes6'> </td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip7'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes7'> </td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip8'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes8'></td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip9'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes9'> </td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_equip10'> </td>
+                  <td><input type="text" class="form-control" name = 'equip_notes10'> </td>
+                </tr>
+            </table>
+        </div>
+        <div class='Abilities'>
+            <h2>Abilities</h2>
+               <table class = 'Abilities Table'> 
+                <tr>
+                  <th>Ability</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_ability1' placeholder="Ex: On Fire"> </td>
+                  <td><textarea class="ability_notes1" name="notes_field" rows="4" cols="50" placeholder='Ex: I Am on Fire'></textarea></td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_ability2'> </td>
+                  <td><textarea class="ability_notes2" name="notes_field" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_ability3'> </td>
+                  <td><textarea class="ability_notes3" name="notes_field" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_ability4'> </td>
+                  <td><textarea class="ability_notes4" name="notes_field" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_ability5'> </td>
+                  <td><textarea class="ability_notes5" name="notes_field" rows="4" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                  <td><input type="text" class="form-control" name = 'attr_ability6'> </td>
+                  <td><textarea class="ability_notes6" name="notes_field" rows="4" cols="50"></textarea></td>
+                </tr>
+            </table>
+        </div>    
+        <h2>Notes</h2>
+        <textarea class="notes_area" name="notes_field" rows="12" cols="100" placeholder='Notes'></textarea>
+    </div>
+
+
+        
+</div>
+<script type="text/worker">
+    const buttonlist = ["character","journal"];
+    buttonlist.forEach(button => {
+        on(`clicked:${button}`, function() {
+            setAttrs({
+                sheetTab: button
+            });
+        });
+    });
+</script>

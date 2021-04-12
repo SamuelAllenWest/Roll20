@@ -1,0 +1,53 @@
+.sheet-character,
+.sheet-journal {
+	display: none;
+}
+/* show the selected tab */
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="journal"] ~ div.sheet-journal {
+	display: block;
+}
+
+.sheet-container{
+    display: grid;
+    grid-template-columns: 43% 57%;
+}
+.sheet-img_row{
+    border: 0px;
+
+}
+th, td{
+  border: 1px solid #ddd;
+  padding: 2px;
+  text-align:center;
+}
+th{
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+    
+}
+img{
+    width: 50px;
+}
+
+.sheet-ability_dropdown{
+ width:65px;   
+}
+.sheet-skill_dropdown{
+ width:105px;   
+}
+.sheet-bane_boon_dropdown{
+ width:65px;   
+}
+
+.sheet-variant{
+    color: maroon;
+}
+
